@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "de.bens0r.acceleration.module"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "de.bens0r.acceleration.module"
         }
     },
     "dependent_plugins": {}

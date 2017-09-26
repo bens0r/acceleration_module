@@ -1,15 +1,16 @@
 //This is the main Javascript File for the Accelerationmodule
 //Module needs cordova plugin cordova-plugin-device-motion
 
-function onSuccess(acceleration) 
+function onSuccess(acceleration)
 {
     console.log('Acceleration X: ' + acceleration.x + '\n' +
           'Acceleration Y: ' + acceleration.y + '\n' +
           'Acceleration Z: ' + acceleration.z + '\n' +
           'Timestamp: '      + acceleration.timestamp + '\n');
+    alert('diggga!');
 }
 
-function onError() 
+function onError()
 {
     alert('onError!');
 }
