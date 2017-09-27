@@ -3,11 +3,10 @@
 
 function onSuccess(acceleration)
 {
-    console.log('Acceleration X: ' + acceleration.x + '\n' +
-          'Acceleration Y: ' + acceleration.y + '\n' +
-          'Acceleration Z: ' + acceleration.z + '\n' +
-          'Timestamp: '      + acceleration.timestamp + '\n');
-    alert('diggga!');
+    app.receivedAccelerateEvent("acceleration_changed",
+    acceleration.x,
+    acceleration.y,
+    acceleration.z);
 }
 
 function onError()

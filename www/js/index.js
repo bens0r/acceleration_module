@@ -25,13 +25,13 @@ var app = {
     	app.load();
         app.receivedEvent('deviceready');
     },
-    
+
     //load Event Handler
-    load: function() 
+    load: function()
     {
 		$(document).ready(
 //			include("js/alert.js",function(){ console.log("included alert.js")})
-			include("js/acceleration.js",function(){})	
+			include("js/acceleration.js",function(){})
 		);
     },
     // Update DOM on a Received Event
@@ -44,6 +44,17 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+
+    receivedAccelerateEvent: function(id, x, y, z) {
+      var parentElement = document.getElementById(id);
+      var xElement = parentElement.querySelector('.x');
+      var yElement = parentElement.querySelector('.y');
+      var zElement = parentElement.querySelector('.z');
+
+      xElement.innerHTML = 'x='+x;
+      yElement.innerHTML = 'y='+y;
+      zElement.innerHTML = 'z='+z;
     }
 };
 
